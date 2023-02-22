@@ -1039,3 +1039,22 @@
 // console.log(getAllPropValues("quantity"));
 // console.log(getAllPropValues("price"));
 // console.log(getAllPropValues("category"));
+doStuffWithBook({
+    title: "The Last Kingdom",
+    numberOfPages: 736,
+    downloads: 10283,
+    rating: 8.38,
+    isPublic: true,
+  });
+
+function doStuffWithBook({
+    title,
+    numberOfPages,
+    downloads,
+    rating,
+    isPublic,
+  }) {
+    console.log(title);
+    console.log(numberOfPages);
+    // І так далі
+  }
