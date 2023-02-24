@@ -1539,17 +1539,42 @@
 // console.log(calculateTotalPrice("Scanner"));
 
 // 21\42
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
-// Change code below this line
-const {yesterday, today, tomorrow} = highTemperatures;
-// const yesterday = highTemperatures.yesterday;
-// const today = highTemperatures.today;
-// const tomorrow = highTemperatures.tomorrow;
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {yesterday, today, tomorrow} = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
 
-// Change code above this line
-const meanTemperature = (yesterday + today + tomorrow) / 3;
-console.log(meanTemperature);
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+
+
+// ==============   31\42   =========
+
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+  const result = {
+    category: category,
+    priority: priority,
+    ...data,
+    completed: completed,
+  };
+
+  // Change code above this line
+
+return result;
+}
+console.log(makeTask({}));
+console.log(makeTask({category: "Homemade", priority: "Low", 
+text: "Take out the trash"}));
+
