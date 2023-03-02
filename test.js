@@ -1558,23 +1558,38 @@
 
 // ==============   31\42   =========
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
-  const result = {
-    category: category,
-    priority: priority,
-    ...data,
-    completed: completed,
-  };
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const result = {
+//     category: category,
+//     priority: priority,
+//     ...data,
+//     completed: completed,
+//   };
 
-  // Change code above this line
+//   // Change code above this line
 
-return result;
+// return result;
+// }
+// console.log(makeTask({}));
+// console.log(makeTask({category: "Homemade", priority: "Low", 
+// text: "Take out the trash"}));
+
+
+// 2\48
+// Колбек-функція
+function greet(name) {
+  console.log(`Ласкаво просимо ${name}.`);
 }
-console.log(makeTask({}));
-console.log(makeTask({category: "Homemade", priority: "Low", 
-text: "Take out the trash"}));
+
+// Функція вищого порядку
+function registerGuest(name, callback) {
+  console.log(`Реєструємо гостя ${name}.`);
+  callback(name);
+}
+
+registerGuest("Mango", greet);
 
