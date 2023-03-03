@@ -1569,6 +1569,7 @@
 //     ...data,
 //     completed: completed,
 //   };
+<<<<<<< HEAD
 
 //   // Change code above this line
 
@@ -1606,3 +1607,29 @@ function filterArray(numbers, value) {
   // Change code above this line
   return filteredNumbers;
 }
+=======
+
+//   // Change code above this line
+
+// return result;
+// }
+// console.log(makeTask({}));
+// console.log(makeTask({category: "Homemade", priority: "Low", 
+// text: "Take out the trash"}));
+
+
+// 2\48
+// Колбек-функція
+function greet(name) {
+  console.log(`Ласкаво просимо ${name}.`);
+}
+
+// Функція вищого порядку
+function registerGuest(name, callback) {
+  console.log(`Реєструємо гостя ${name}.`);
+  callback(name);
+}
+
+registerGuest("Mango", greet);
+
+>>>>>>> 952ea5327ef7108f2d6f499882094b2e116ef57b
