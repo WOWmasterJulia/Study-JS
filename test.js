@@ -933,7 +933,7 @@
 // const values = Object.values(salaries);
 // console.log(values);
 //    for (const value of values) {
-//   totalSalary += value 
+//   totalSalary += value
 //    }
 //   return totalSalary;
 // }
@@ -972,9 +972,9 @@
 
 
 // Завдання 18/41
-// Напиши функцію getProductPrice(productName), яка приймає один параметр 
-// productName - назва продукту. Функція шукає об'єкт продукту з таким ім'ям 
-// (властивість name) в масиві products і повертає його ціну (властивість price). 
+// Напиши функцію getProductPrice(productName), яка приймає один параметр
+// productName - назва продукту. Функція шукає об'єкт продукту з таким ім'ям
+// (властивість name) в масиві products і повертає його ціну (властивість price).
 // Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
 
 // Оголошена функція getProductPrice(productName).
@@ -1262,7 +1262,7 @@
 // додає поле mood зі значенням 'happy'
 // замінює значення hobby на 'skydiving'
 // замінює значення premium на false
-// виводить вміст об 'єкта user у форматі ключ:значення 
+// виводить вміст об 'єкта user у форматі ключ:значення
 // використовуючи Object.keys() та for...of
 
 // const user = {
@@ -1293,8 +1293,8 @@
 
 
 // Example 2 - метод Object.values()
-// У нас є об'єкт, де зберігаються зарплати нашої команди. 
-// Напишіть код для підсумовування всіх зарплат і збережіть результат 
+// У нас є об'єкт, де зберігаються зарплати нашої команди.
+// Напишіть код для підсумовування всіх зарплат і збережіть результат
 // у змінній sum. Повинно вийти 390. Якщо об'єкт salaries порожній,
 //  то результат має бути 0.
 
@@ -1527,7 +1527,7 @@
 //   let result = 0;
 //   for (const product of products) {
 //       if (product.name === productName) {
-//       result = product.price * product.quantity; 
+//       result = product.price * product.quantity;
 //     }
 //   }
 //   return result;
@@ -1558,23 +1558,51 @@
 
 // ==============   31\42   =========
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const result = {
+//     category: category,
+//     priority: priority,
+//     ...data,
+//     completed: completed,
+//   };
+
+//   // Change code above this line
+
+// return result;
+// }
+// console.log(makeTask({}));
+// console.log(makeTask({category: "Homemade", priority: "Low",
+// text: "Take out the trash"}));
+
+
+// 6\46
+// Функція filterArray(numbers, value) приймає масив чисел numbers і повертає новий масив, в якому будуть тільки ті елементи оригінального масиву, які більші за значення параметра value.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
+
+// Оголошена функція filterArray(numbers, value)
+// Для перебирання масиву numbers використаний метод forEach
+// Виклик функції filterArray([1, 2, 3, 4, 5], 3) повертає [4, 5]
+// Виклик функції filterArray([1, 2, 3, 4, 5], 4) повертає [5]
+// Виклик функції filterArray([1, 2, 3, 4, 5], 5) повертає []
+// Виклик функції filterArray([12, 24, 8, 41, 76], 38) повертає [41, 76]
+// Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
   // Change code below this line
-  const result = {
-    category: category,
-    priority: priority,
-    ...data,
-    completed: completed,
-  };
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > value) {
+      filteredNumbers.push(numbers[i]);
+    }
+  }
 
   // Change code above this line
-
-return result;
+  return filteredNumbers;
 }
-console.log(makeTask({}));
-console.log(makeTask({category: "Homemade", priority: "Low", 
-text: "Take out the trash"}));
-
