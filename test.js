@@ -1691,3 +1691,8 @@
 // };
 // console.log(getTotalBalanceByGender(users, "male"));
 // console.log(users.length);
+
+
+// ----ОКОШКО PROMPT----
+// const quantity = prompt("Введите количество товаров");
+// console.log(quantity);
